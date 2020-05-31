@@ -1,8 +1,51 @@
 a {
    text-decoration: none;
-   color: black;
-   font-family: 'Sansita', sans-serif
+   color: white;
+   font-family: 'Sansita', sans-serif;
 }
+
+
+
+
+
+.arrow-down::after{
+   content: "";
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   margin: auto;
+   top: 90%;
+   right: 0;
+   bottom:-65%;
+   left: 0;
+   border-right: 4px solid #fff;
+   border-bottom: 4px solid #fff;
+   -webkit-transform: rotate(45deg);
+   transform: rotate(45deg);
+   -webkit-animation: 3s arrow infinite ease;
+   animation: 3s arrow infinite ease;
+   cursor: pointer;
+ 
+}
+
+@-webkit-keyframes arrow {
+   0%, 100% {
+      top: 50px;
+   }
+   50% {
+      top: 80px;
+   }
+}
+
+@keyframes arrow {
+   0%, 100% {
+      top: 50px;
+   }
+   50% {
+      top: 80px;
+   }
+}
+
 a:hover {
    color: #e85143;
 }
@@ -11,8 +54,9 @@ a:hover {
    min-height:60px;
    grid-auto-flow: column;
    padding-left: 100px;
-   padding-right: 100px;
+   padding-right:  0;
    margin-right: 150px;
+ 
   
 }
  
@@ -23,10 +67,12 @@ a:hover {
    grid-auto-flow: column;
    font-size: 20px;
    grid-gap: 20px;
+ 
+   
 }
  
 .img {
-   width: 600px;
+   width: 650px;
   
 
  
@@ -40,36 +86,65 @@ a:hover {
 .hero {
    display:flex;
    align-items: center;
-   background-color: #FBFBFB;
    padding: 0px;
    height: 420px;
    padding-right: 5%;
    padding-left: 5%;
    scroll-behavior: auto;
+   margin-top: 100px;
 }
  
 h4 {
    font-size: 35px;
-   margin-left: 130px;
+
    font-family: 'Sahitya', serif;
-   margin-top: 50px;
-   margin-bottom: -20px;
+ 
+  
+   color: #455695;
 }
   
  h1 {
      font-size: 50px;
      font-family: 'Russo One', sans-serif;
+     color: white;
       
  } 
   .hero .intro p {
-     font-size: 17px;
+     font-size: 20px;
      font-family: 'Amiko', sans-serif;
-     color: #121010;
+     color: white;
      letter-spacing: 1px;
      margin-bottom: 40px;
      margin-top: -10px;
      
+     
  }
+
+
+ .background
+ {
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../Images/background.jpg) repeat fixed 100%;
+    padding-bottom: 170px;
+    background-position: center;
+    color: white;
+    display: table;
+    padding-bottom: 220px 
+ 
+ }
+
+ .Project
+ {
+  
+      width: auto;
+      height: 100px;
+      background-color: #F5F4FF;
+      margin-top: -50px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+ 
+ }
+
  
 
  .container
@@ -82,6 +157,7 @@ h4 {
     flex-wrap: wrap;
     padding-right: 10%;
     padding-left: 10%;
+    margin-top: 75px;
     
     
     
@@ -95,6 +171,7 @@ h4 {
    align-items: center;
    flex-wrap: wrap;
    margin: 100px 0;
+   transition: 0.70s;
    
 }
 .container .card:nth-child(odd)
@@ -114,6 +191,8 @@ h4 {
    width: 500px;
    height: 400px;
    z-index: 1;
+   
+  
 }
 
 .container .card:nth-child(even) .imgBX
@@ -129,6 +208,13 @@ h4 {
    width: 100%;
    height: 100%;
    object-fit:cover;
+   width: 100%;
+}
+
+.container .card:hover
+{
+transform: scale(1.2); 
+
 
 }
 .container .card .contentBX
@@ -183,15 +269,35 @@ h4 {
    color: #fff;
    letter-spacing: 1px;
 }
-.container .card .contentBX a{
+.container .card .contentBX .button 
+{
    display: inline-block;
    margin-top: 15px;
    color: #fff;
    text-decoration: none;
-   padding: 10px;
+   padding: 10px 20px;
    border: 1px solid #fff;
+   cursor: pointer;
+   transition: 0.8s;
+   position: relative;
+   overflow: hidden;
+   background: none;
+
 
 }
+
+
+.container .card .contentBX .button:hover
+{
+   background-color:white;
+   color: black;
+
+}
+
+/*-----page scroll----*/
+
+
+
 
 /*-----footer----*/
 footer a {
